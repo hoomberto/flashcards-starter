@@ -3,8 +3,8 @@ const Card = require('../src/Card');
 const Deck = require('../src/Deck');
 
 class Round {
-  constructor() {
-
+  constructor(deck) {
+    this.deck = deck;
   }
 }
 

@@ -30,4 +30,15 @@ describe('Turn', () => {
     expect(turn.returnGuess()).to.equal('pug');
   });
 
+  it('should be able to return its card', () => {
+    const card = new Card(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter');
+    const turn = new Turn('pug', card);
+
+    expect(turn.returnCard()).to.deep.equal(
+      { id: 1,
+      question: 'What is Robbie\'s favorite animal',
+      answers: ['sea otter', 'pug', 'capybara'],
+      correctAnswer: 'sea otter'
+    });
+  });
 });

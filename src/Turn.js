@@ -13,7 +13,11 @@ class Turn {
   }
   evaluateGuess() {
     let result = (this.guess === this.card.correctAnswer) ? true : false
-    return result 
+    return result
+  }
+  giveFeedback() {
+    let result = (this.evaluateGuess()) ? 'correct!' : 'incorrect!'
+    return result
   }
 }
 

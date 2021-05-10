@@ -13,8 +13,8 @@ class Round {
   }
   takeTurn(guess) {
     let turn = new Turn(guess, this.returnCurrentCard())
-    // this.turns++;
-    // this.currentCard = this.deck.cards[1];
+    this.turns++;
+    this.currentCard = this.deck.cards[1];
     return turn.giveFeedback();
   }
 }

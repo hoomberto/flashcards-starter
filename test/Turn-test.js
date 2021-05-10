@@ -41,4 +41,17 @@ describe('Turn', () => {
       correctAnswer: 'sea otter'
     });
   });
+
+  it('should indicate if the user’s guess matches the correct answer on the card', () => {
+    const card = new Card(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter');
+    const turn1 = new Turn('pug', card);
+    const turn2 = new Turn('sea otter', card);
+
+    expect(card.correctAnswer).to.equal('sea otter');
+    expect(turn1.guess).to.equal('pug');
+    expect(turn1.evaluateGuess()).to.be.false;
+
+    expect(turn2.guess).to.equal('sea otter');
+    expect(turn2.evaluateGuess()).to.be.true;
+  })
 });

@@ -22,4 +22,12 @@ describe('Turn', () => {
     expect(turn.card.answers).to.include('pug');
     expect(turn.guess).to.equal('pug');
   });
+
+  it('should be able to return its guess', () => {
+    const card = new Card(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter');
+    const turn = new Turn('pug', card);
+
+    expect(turn.returnGuess()).to.equal('pug');
+  });
+
 });

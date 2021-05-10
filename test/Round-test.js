@@ -57,4 +57,21 @@ describe('Round', () => {
       correctAnswer: 'playing with bubble wrap'
     })
   })
+
+  it('should create a new Turn instance when a guess is made', () => {
+    const card1 = new Card(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter');
+    const card2 = new Card(14, 'What organ is Khalid missing?', ['spleen', 'appendix', 'gallbladder'], 'gallbladder');
+    const card3 = new Card(12, 'What is Travis\'s favorite stress reliever?', ['listening to music', 'watching Netflix', 'playing with bubble wrap'], 'playing with bubble wrap');
+
+    const deck = new Deck([card1, card2, card3]);
+    const deck2 = new Deck([card3, card2, card1]);
+
+    const round = new Round(deck);
+
+    let guess = round.takeTurn('sea otter')
+    let guess2 = round.takeTurn('spleen')
+
+    expect(guess).to.equal('correct!')
+    expect(guess2).to.equal('incorrect!')
+  })
 });

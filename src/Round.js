@@ -7,6 +7,8 @@ class Round {
     this.deck = deck;
     this.turns = 0;
     this.currentCard;
+    this.incorrectGuesses = [];
+    this.correctGuesses = []
   }
   returnCurrentCard() {
     return this.currentCard || this.deck.cards[0];
@@ -14,6 +16,9 @@ class Round {
   takeTurn(guess) {
     let turn = new Turn(guess, this.returnCurrentCard())
     this.turns++;
+    (turn.evaluateGuess())
+    ? this.correctGuesses.push(turn.card.id)
+    : this.incorrectGuesses.push(turn.card.id)
     this.currentCard = this.deck.cards[1];
     return turn.giveFeedback();
   }

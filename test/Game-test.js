@@ -18,4 +18,26 @@ describe('Game', () => {
     expect(game).to.be.an.instanceof(Game);
   });
 
+  it('should announce the game and number of cards in the deck when starting a game', () => {
+    const game = new Game();
+    game.start();
+
+    const card1 = new Card(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter');
+    const card2 = new Card(14, 'What organ is Khalid missing?', ['spleen', 'appendix', 'gallbladder'], 'gallbladder');
+    const card3 = new Card(12, 'What is Travis\'s favorite stress reliever?', ['listening to music', 'watching Netflix', 'playing with bubble wrap'], 'playing with bubble wrap');
+
+    const currentRound = game.currentRound()
+
+    console.log(currentRound.currentCard);
+
+    expect(currentRound).to.deep.equal({
+      deck: { cards: [ card1, card2, card3 ] },
+      turns: 0,
+      currentCard: undefined,
+      incorrectGuesses: [],
+      correctGuesses: [],
+      guesses: 0
+    })
+  });
+
 })

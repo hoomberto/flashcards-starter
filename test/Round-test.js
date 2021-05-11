@@ -110,6 +110,12 @@ describe('Round', () => {
     expect(round.turns).to.equal(2)
     expect(round.incorrectGuesses).to.deep.equal([14]);
     expect(round.correctGuesses).to.deep.equal([1]);
+
+    expect(round.returnCurrentCard()).to.deep.equal({ id: 12,
+      question: 'What is Travis\'s favorite stress reliever?',
+      answers: ['listening to music', 'watching Netflix', 'playing with bubble wrap'],
+      correctAnswer: 'playing with bubble wrap'
+    })
   })
 
 });

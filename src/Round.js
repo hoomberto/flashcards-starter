@@ -9,7 +9,6 @@ class Round {
     this.currentCard = undefined;
     this.incorrectGuesses = [];
     this.correctGuesses = []
-    this.guesses = 0;
   }
   returnCurrentCard() {
     return this.currentCard || this.deck.cards[0];
@@ -17,7 +16,6 @@ class Round {
   takeTurn(guess) {
     let turn = new Turn(guess, this.returnCurrentCard())
     this.turns++;
-    this.guesses++;
     (turn.evaluateGuess())
     ? this.correctGuesses.push(turn.card.id)
     : this.incorrectGuesses.push(turn.card.id)
@@ -29,7 +27,7 @@ class Round {
     if (!this.correctGuesses.length) {
       return 0;
     }
-    return Math.floor((this.correctGuesses.length / this.guesses) * 100)
+    return Math.floor((this.correctGuesses.length / this.turns) * 100)
   }
   endRound() {
     return `** Round over! ** You answered ${this.calculatePercentCorrect()}% of the questions correctly!`

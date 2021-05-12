@@ -8,34 +8,31 @@ const Round = require('../src/Round');
 
 class Game {
   constructor() {
-    this.round;
+    this.currentRound;
   }
 
   start() {
-    const card1 = new Card(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter');
-    const card2 = new Card(14, 'What organ is Khalid missing?', ['spleen', 'appendix', 'gallbladder'], 'gallbladder');
-    const card3 = new Card(12, 'What is Travis\'s favorite stress reliever?', ['listening to music', 'watching Netflix', 'playing with bubble wrap'], 'playing with bubble wrap');
-
-    const deck = new Deck([card1, card2, card3]);
-
-    this.round = new Round(deck);
-
-    this.printMessage(deck, this.round)
-    this.printQuestion(this.round)
+    // const parsedData = JSON.parse(prototypeQuestions);
+    const cards = []
+    prototypeQuestions.forEach(question => cards.push(new Card(question.id, question.question, question.answers, question.correctAnswer)));
+    // console.log(cards)
+    this.currentRound = new Round(new Deck(cards));
+    this.printMessage(this.currentRound.deck, this.currentRound.turns)
+    this.printQuestion(this.currentRound)
   }
 
   printMessage(deck, round) {
-      console.log(`Welcome to FlashCards! You are playing with ${deck.countCards()} cards.
+      console.log(`Welcome to FlashCards! You are playing with ${this.currentRound.deck.countCards()} cards.
 -----------------------------------------------------------------------`)
   }
 
   printQuestion(round) {
       util.main(round);
   }
-
-  currentRound() {
-    return this.round;
-  }
+  //
+  // currentRound() {
+  //   return this.round;
+  // }
 }
 
 module.exports = Game;

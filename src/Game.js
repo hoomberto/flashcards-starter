@@ -12,27 +12,21 @@ class Game {
   }
 
   start() {
-    // const parsedData = JSON.parse(prototypeQuestions);
     const cards = []
     prototypeQuestions.forEach(question => cards.push(new Card(question.id, question.question, question.answers, question.correctAnswer)));
-    // console.log(cards)
     this.currentRound = new Round(new Deck(cards));
-    this.printMessage(this.currentRound.deck, this.currentRound.turns)
+    this.printMessage(this.currentRound.deck)
     this.printQuestion(this.currentRound)
   }
 
-  printMessage(deck, round) {
-      console.log(`Welcome to FlashCards! You are playing with ${this.currentRound.deck.countCards()} cards.
+  printMessage(deck) {
+    console.log(`Welcome to FlashCards! You are playing with ${this.currentRound.deck.countCards()} cards.
 -----------------------------------------------------------------------`)
   }
 
   printQuestion(round) {
-      util.main(round);
+    util.main(round);
   }
-  //
-  // currentRound() {
-  //   return this.round;
-  // }
 }
 
 module.exports = Game;

@@ -13,31 +13,19 @@ describe('Game', () => {
     expect(Game).to.be.a('function');
   });
 
-  it('should be an instance of Deck', () => {
+  it('should be an instance of Game', () => {
     const game = new Game();
     expect(game).to.be.an.instanceof(Game);
   });
 
-  it('should announce the game and number of cards in the deck when starting a game', () => {
-    const card1 = new Card(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter');
-    const card2 = new Card(14, 'What organ is Khalid missing?', ['spleen', 'appendix', 'gallbladder'], 'gallbladder');
-    const card3 = new Card(12, 'What is Travis\'s favorite stress reliever?', ['listening to music', 'watching Netflix', 'playing with bubble wrap'], 'playing with bubble wrap');
+  it('should create cards, put cards in deck, then create a new round using the deck upon game start', () => {
 
-    const deck = new Deck([card1, card2, card3])
     const game = new Game();
-    game.start(deck);
+    game.start();
 
-    // const currentRound = game.currentRound
-
-    // console.log(currentRound.currentCard);
     expect(game.currentRound).to.be.an.instanceof(Round);
-    // expect(game.currentRound).to.deep.equal({
-    //   deck: { cards: [ card1, card2, card3 ] },
-    //   turns: 0,
-    //   currentCard: undefined,
-    //   incorrectGuesses: [],
-    //   correctGuesses: [],
-    // })
+    expect(game.currentRound.deck).to.be.an.instanceof(Deck);
+    expect(game.currentRound.deck.cards[0]).to.be.an.instanceof(Card)
   });
 
 })

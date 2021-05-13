@@ -4,10 +4,10 @@ Turing 2103 Mod 2 FE Final Solo Project
 ## Table of Contents
 * [Introduction](#Introduction)
 * [Features](#Features)
-* [Installation/Setup](#Installation/Setup-instructions)
+* [Setup instructions](#Setup-instructions)
 * [Future Additions](#Future-Additions)
 * [Contributors](#Contributors)
-* [Technologies Used](#Technologies-used)
+* [Technologies Used](#Technologies-Used)
 
 ## Introduction
 The goal of this project was to be able to contribute code to an partially constructed object-oriented application, follow spec/prompts to make a working application, implement ES6 classes, write modular, reusable code that follows SRP, and implement a robust testing suite using TDD

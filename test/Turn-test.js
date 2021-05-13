@@ -36,9 +36,9 @@ describe('Turn', () => {
 
     expect(turn.returnCard()).to.deep.equal(
       { id: 1,
-      question: 'What is Robbie\'s favorite animal',
-      answers: ['sea otter', 'pug', 'capybara'],
-      correctAnswer: 'sea otter'
+        question: 'What is Robbie\'s favorite animal',
+        answers: ['sea otter', 'pug', 'capybara'],
+        correctAnswer: 'sea otter'
     });
   });
 

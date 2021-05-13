@@ -33,7 +33,7 @@ describe('Turn', () => {
         question: 'What is Robbie\'s favorite animal',
         answers: ['sea otter', 'pug', 'capybara'],
         correctAnswer: 'sea otter'
-    });
+      });
   });
 
   it('should indicate if the user’s guess matches the correct answer on the card', () => {

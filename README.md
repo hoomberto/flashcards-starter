@@ -4,9 +4,10 @@ Turing 2103 Mod 2 FE Final Solo Project
 ## Table of Contents
 * [Introduction](#Introduction)
 * [Features](#Features)
+* [Install/Setup instructions](#Install/Setup instructions)
 * [Future Additions](#Future-Additions)
 * [Contributors](#Contributors)
-* [Languages](#Languages)
+* [Technologies Used](#Technologies Used)
 
 ## Introduction
 The goal of this project was to be able to contribute code to an partially constructed object-oriented application, follow spec/prompts to make a working application, implement ES6 classes, write modular, reusable code that follows SRP, and implement a robust testing suite using TDD
@@ -18,6 +19,9 @@ The goal of this project was to be able to contribute code to an partially const
 Fully playable rock paper scissors in which the user and computer choices are shown beneath what they pick
 ![alt text](https://media.giphy.com/media/IJcXynV0I365zgvsxH/giphy.gif "FlashCard Demo")
 
+## Install/Setup instructions
+Fork or clone this repo and (with Node.js installed) run node index.js to play!
+
 ### Future Additions
 - Add timer functionality so that the quiz displays how long it took to complete
 - Have the quiz restart if the user's score is less than 90 percent
@@ -25,5 +29,8 @@ Fully playable rock paper scissors in which the user and computer choices are sh
 ## Contributors
 [Bobby Vasquez](https://github.com/hoomberto/)
 
-## Languages
+## Technologies Used
 JavaScript  
+Mocha
+Chai
+Node.js

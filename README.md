@@ -19,7 +19,7 @@ The goal of this project was to be able to contribute code to an partially const
 Fully playable rock paper scissors in which the user and computer choices are shown beneath what they pick
 ![alt text](https://media.giphy.com/media/IJcXynV0I365zgvsxH/giphy.gif "FlashCard Demo")
 
-## Install/Setup instructions
+## Setup instructions
 Fork or clone this repo and (with Node.js installed) run node index.js to play!
 
 ### Future Additions

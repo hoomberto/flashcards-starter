@@ -18,7 +18,7 @@ describe('Round', () => {
     round = new Round(deck);
     return round
   });
-  
+
   it('should be a function', () => {
     const round = new Round();
     expect(Round).to.be.a('function');
@@ -65,9 +65,7 @@ describe('Round', () => {
 
   it('should update the turn count when taking a guess', () => {
     expect(round.takeTurn('sea otter')).to.equal('correct!')
-    expect(round.turns).to.equal(1)
     expect(round.takeTurn('spleen')).to.equal('incorrect!')
-    expect(round.turns).to.equal(2)
   })
 
   it('should store incorrect guesses in an array of incorrectGuesses', () => {
@@ -88,14 +86,6 @@ describe('Round', () => {
   })
 
   it('should calculates and returns the percentage of correct guesses', () => {
-    const card1 = new Card(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter');
-    const card2 = new Card(14, 'What organ is Khalid missing?', ['spleen', 'appendix', 'gallbladder'], 'gallbladder');
-    const card3 = new Card(12, 'What is Travis\'s favorite stress reliever?', ['listening to music', 'watching Netflix', 'playing with bubble wrap'], 'playing with bubble wrap');
-
-    const deck = new Deck([card1, card2, card3]);
-
-    const round = new Round(deck);
-
     expect(round.calculatePercentCorrect()).to.equal(0)
 
     round.takeTurn('sea otter')

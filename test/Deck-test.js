@@ -22,7 +22,6 @@ describe('Deck', () => {
 
     const deck = new Deck([card1, card2, card3]);
 
-
     expect(deck.cards).to.deep.equal([card1, card2, card3])
     expect(deck.cards[0]).to.be.an.instanceOf(Card);
   })

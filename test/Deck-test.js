@@ -10,9 +10,8 @@ describe('Deck', () => {
     card2 = new Card(14, 'What organ is Khalid missing?', ['spleen', 'appendix', 'gallbladder'], 'gallbladder');
     card3 = new Card(12, 'What is Travis\'s middle name?', ['Lex', 'William', 'Fitzgerald'], 'Fitzgerald');
     deck = new Deck([card1, card2, card3]);
-
-    return deck
   })
+  
   it('should be a function', () => {
     expect(Deck).to.be.a('function');
   });

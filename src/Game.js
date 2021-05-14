@@ -16,6 +16,7 @@ class Game {
       cards.push(new Card(question.id, question.question, question.answers, question.correctAnswer))
     );
     this.currentRound = new Round(new Deck(cards));
+    this.currentRound.startTimer();
     this.printMessage(this.currentRound.deck)
     this.printQuestion(this.currentRound)
   }

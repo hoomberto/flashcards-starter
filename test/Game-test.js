@@ -10,6 +10,7 @@ describe('Game', () => {
   beforeEach('Setup', () => {
     game = new Game();
   })
+
   it('should be a function', () => {
     expect(Game).to.be.a('function');
   });

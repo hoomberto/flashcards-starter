@@ -30,7 +30,7 @@ Fork or clone this repo and (with Node.js installed) run node index.js to play!
 [Bobby Vasquez](https://github.com/hoomberto/)
 
 ## Technologies Used
-JavaScript  
-Mocha
-Chai
+JavaScript<br>
+Mocha<br>
+Chai<br>
 Node.js

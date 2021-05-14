@@ -9,6 +9,7 @@ describe('Turn', () => {
     card = new Card(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter');
     turn = new Turn('pug', card);
   })
+
   it('should be a function', () => {
     expect(Turn).to.be.a('function');
   });

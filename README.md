@@ -10,7 +10,7 @@ Turing 2103 Mod 2 FE Final Solo Project
 * [Technologies Used](#Technologies-Used)
 
 ## Introduction
-The goal of this project was to be able to contribute code to an partially constructed object-oriented application, follow spec/prompts to make a working application, implement ES6 classes, write modular, reusable code that follows SRP, and implement a robust testing suite using TDD
+This project allows users to take a quiz meant to test one's knowledge of array prototype methods - at the end of the quiz, users are shown how well they did and the length of time it took to complete in minutes and seconds. The goal of this project was to be able to contribute code to an partially constructed object-oriented application, follow spec/prompts to make a working application, implement ES6 classes, write modular, reusable code that follows SRP, and implement a robust testing suite using test driven development
 
 ## Features
 - Users can run through a quiz featuring questions relating to prototype array methods

@@ -17,7 +17,6 @@ This project allows users to take a quiz meant to test one's knowledge of array 
 - At the end of the quiz, users are given a score of their result. 
 - At the end of the quiz, users are given the minutes and seconds it took for them to complete the quiz
 
-Fully playable rock paper scissors in which the user and computer choices are shown beneath what they pick
 ![alt text](https://media.giphy.com/media/IJcXynV0I365zgvsxH/giphy.gif "FlashCard Demo")
 
 ## Setup instructions

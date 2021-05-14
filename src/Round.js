@@ -39,7 +39,6 @@ class Round {
       minutes: (Math.floor(time / 60)),
       seconds: (time % 60)
     }
-    // return timer
   }
   endRound() {
     clearInterval(this.timer);

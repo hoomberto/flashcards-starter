@@ -15,6 +15,7 @@ The goal of this project was to be able to contribute code to an partially const
 ## Features
 - Users can run through a quiz featuring questions relating to prototype array methods
 - At the end of the quiz, users are given a score of their result. 
+- At the end of the quiz, users are given the minutes and seconds it took for them to complete the quiz
 
 Fully playable rock paper scissors in which the user and computer choices are shown beneath what they pick
 ![alt text](https://media.giphy.com/media/IJcXynV0I365zgvsxH/giphy.gif "FlashCard Demo")
@@ -23,7 +24,6 @@ Fully playable rock paper scissors in which the user and computer choices are sh
 Fork or clone this repo and (with Node.js installed) run node index.js to play!
 
 ### Future Additions
-- Add timer functionality so that the quiz displays how long it took to complete
 - Have the quiz restart if the user's score is less than 90 percent
 
 ## Contributors

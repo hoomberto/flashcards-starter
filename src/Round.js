@@ -35,11 +35,11 @@ class Round {
     }, 1000);
   }
   formatTime(time) {
-    let timer = {
+    return {
       minutes: (Math.floor(time / 60)),
       seconds: (time % 60)
     }
-    return timer
+    // return timer
   }
   endRound() {
     clearInterval(this.timer);
